@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Postal Rate Calculator</title>
+</head>
+<body>
+    <div class="mainHeader"><div class="h1Container"><h1>Home Training Helper</h1></div></div>
+    
+    <form method="post" action="/routine">
+        <div class="bodyInformationContainer">
+            <fieldset class="bodyField">
+                <legend>Body Information</legend>
+                <div class="genderContainer">
+                    <label for="gender">Gender*</label>
+                    <label class="genderRadio"><input type="radio" name="gender" value="0" required/>Male</label>
+                    <label class="genderRadio"><input type="radio" name="gender" value="1"/>Female</label>
+                </div>
+                <div class="unitContainer">
+                    <label for="measureUnit">Choose measurement unit*</label>
+                    <select id="measureUnit" name="measureUnit" required>
+                        <option value="cm">centimeter(cm)</option>
+                        <option value="in">inch(in)</option>
+                        <option value="ft">foot(ft)</option>
+                    </select>
+                    <p class="smallNotice">the unit for height and waist circumference must be same</p>
+                </div>
+                <div class="heightContainer">
+                    <label  for="height">height*</label>
+                    <input type="number" name="height" required>
+                </div>
+                <div class="waistContainer">
+                    <label for="waist">Waist Circumference*</label>
+                    <input type="text" name="waist" required>
+                </div>
+                <p class="smallNotice">*required</p>
+            </fieldset>
+        </div>
+
+        <div class="planningContainer">
+            <fieldset class="planField">
+                <legend>Exercise Planning</legend>
+                <div class="hoursContainer">
+                    <label for="hours">Planned hours to exercise per day*</label>
+                    <input type="number" name="hours" required>
+                </div>
+                <div class="preferredContainer">
+                    <label for="preferredPart">Preferred part to work on extra</label>
+                    <select id="preferredPart" name="preferredPart">
+                        <option value="balance">Balance(Not specific part)</option>
+                        <option value="chest">Chest</option>
+                        <option value="legs">Legs</option>
+                        <option value="back">Back</option>
+                        <option value="gluteus">Gluteus</option>
+                        <option value="core">Core</option>
+                        <option value="bicep">Bicep</option>
+                        <option value="tricep">Tricep</option>
+                    </select>
+                </div>
+                <div class="levelContainer">
+                    <label for="level">Level of workout*</label>
+                    <div class="levelRadio">
+                        <label><input type="radio" name="level" value="warmup" required/>Warming Up</label>
+                        <label><input type="radio" name="level" value="basic" required/>Basic Training</label>
+                        <label><input type="radio" name="level" value="hard" required/>Hard Training</label>
+                        <label><input type="radio" name="level" value="intense" required/>Intense Training</label>
+                    </div>
+                </div>
+                <p class="smallNotice">*required</p>
+            </fieldset>
+        </div>
+        <div class="submitContainer"><input type="submit" name="submit" value="Create Routine"></div>
+        
+    </form>
+    
+</body>
+</html>

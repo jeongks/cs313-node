@@ -1,0 +1,144 @@
+body{
+    width:70%;
+    margin: 0 15%;
+    background: #ddd;
+}
+
+
+label {
+    font-size: 1.5rem;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+legend {
+    font-size: 1.7rem;
+    background-color: #f0f8ff;
+    padding: 10px;
+    border-radius: 10px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+fieldset {
+    border-width: 4px;
+}
+
+.smallNotice{
+    color: #ff5555;
+    font-size: 0.9rem;
+    font-style: italic;
+    text-align: right;
+    margin-right: 10px;
+}
+
+.bodyInformationContainer, .planningContainer, .mainHeader , .submitContainer{
+    width:50%;
+    margin: 20px 25%;
+}
+
+.bodyInformationContainer label {
+    color: #fff;
+}
+
+.bodyField{
+    background-color: #2f4f4f;
+}
+.genderContainer, .unitContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    justify-self: center;
+    padding: 2%;
+}
+
+.genderContainer > .genderRadio {
+    font-size: 1.2rem;
+}
+
+.unitContainer > label {
+    font-size: 1.5rem;
+}
+
+.unitContainer > select {
+    width: 25%;
+    margin-top: 10px;
+    font-size: 1.2rem;
+}
+
+.unitContainer > .smallNotice {
+    margin: 3px 10px;
+    text-align: left;
+}
+
+.heightContainer, .waistContainer, .h1Container {
+    display: flex;
+    flex-direction: row;
+    padding: 2%;
+}
+
+.heightContainer, .waistContainer{
+    justify-content: start;
+}
+
+.h1Container {    
+    justify-content: center;
+    background: #fff;
+    border-radius: 10px;
+}
+
+.h1Container h1 {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-style: italic;
+}
+
+
+.heightContainer > input {
+    width:  10%;
+    margin-left: 150px;
+}
+
+.waistContainer > input , .hoursContainer > input {
+    width: 10%;
+    margin-left: 8px;
+}
+
+.planField{
+    background-color: #333;
+}
+
+.planningContainer label {
+    color: #eee;
+}
+
+.planningContainer select {
+    margin-left: 10px;
+    font-size: 1.2rem;
+}
+
+.planningContainer option {
+    font-size: 1.2rem;
+}
+
+.levelContainer {
+    margin-top: 20px;
+}
+
+.preferredContainer, .levelRadio {
+    margin-top: 5px;
+}
+
+.levelRadio > label {
+    font-size:  1.2rem;
+}
+
+.submitContainer {
+    display: flex;
+    justify-content: center;
+}
+
+.submitContainer input {
+    width: 30%;
+    font-size: 1.5rem;
+    padding: 10px;
+    background-color: #555;
+    color: #fff;
+}
