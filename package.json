@@ -1,0 +1,14 @@
+{
+  "name": "myproject2",
+  "version": "1.0.0",
+  "description": "This project is building a web page that provide clients hoem training exercise routine. The exercise is based on free weight and exercising at home since the outbreak of corona virus.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Kisuk Jeong",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
