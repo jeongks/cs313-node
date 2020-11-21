@@ -4,22 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
-    <title>Postal Rate Calculator</title>
+    <script src="lib/jquery/jquery.min.js"></script>
+    <title>Home Training Helper</title>
 </head>
 <body>
     <div class="mainHeader"><div class="h1Container"><h1>Home Training Helper</h1></div></div>
     
-    <form method="post" action="/routine">
+    <form method="post" action="/calc">
         <div class="bodyInformationContainer">
             <fieldset class="bodyField">
                 <legend>Body Information</legend>
                 <div class="genderContainer">
-                    <label for="gender">Gender*</label>
+                    <label for="gender">Gender<span class="sNotice">*</span></label>
                     <label class="genderRadio"><input type="radio" name="gender" value="0" required/>Male</label>
                     <label class="genderRadio"><input type="radio" name="gender" value="1"/>Female</label>
                 </div>
                 <div class="unitContainer">
-                    <label for="measureUnit">Choose measurement unit*</label>
+                    <label for="measureUnit">Choose measurement unit<span class="sNotice">*</span></label>
                     <select id="measureUnit" name="measureUnit" required>
                         <option value="cm">centimeter(cm)</option>
                         <option value="in">inch(in)</option>
@@ -28,11 +29,11 @@
                     <p class="smallNotice">the unit for height and waist circumference must be same</p>
                 </div>
                 <div class="heightContainer">
-                    <label  for="height">height*</label>
+                    <label  for="height">height<span class="sNotice">*</span></label>
                     <input type="number" name="height" required>
                 </div>
                 <div class="waistContainer">
-                    <label for="waist">Waist Circumference*</label>
+                    <label for="waist">Waist Circumference<span class="sNotice">*</span></label>
                     <input type="text" name="waist" required>
                 </div>
                 <p class="smallNotice">*required</p>
@@ -43,9 +44,10 @@
             <fieldset class="planField">
                 <legend>Exercise Planning</legend>
                 <div class="hoursContainer">
-                    <label for="hours">Planned hours to exercise per day*</label>
+                    <label for="hours">Planned hours to exercise per day<span class="sNotice">*</span></label>
                     <input type="number" name="hours" required>
                 </div>
+                
                 <div class="preferredContainer">
                     <label for="preferredPart">Preferred part to work on extra</label>
                     <select id="preferredPart" name="preferredPart">
@@ -60,7 +62,7 @@
                     </select>
                 </div>
                 <div class="levelContainer">
-                    <label for="level">Level of workout*</label>
+                    <label for="level">Level of workout<span class="sNotice">*</span></label>
                     <div class="levelRadio">
                         <label><input type="radio" name="level" value="warmup" required/>Warming Up</label>
                         <label><input type="radio" name="level" value="basic" required/>Basic Training</label>
@@ -74,6 +76,7 @@
         <div class="submitContainer"><input type="submit" name="submit" value="Create Routine"></div>
         
     </form>
+   
     
 </body>
 </html>
