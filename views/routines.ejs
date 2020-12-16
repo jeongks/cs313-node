@@ -7,15 +7,320 @@
     <link rel="stylesheet" href="css/style.css">
     <script src="lib/jquery/jquery.min.js"></script>
 </head>
-<body>
-    
+<body id="ejsBody">
+    <% data = JSON.stringify(result) %>
     <h1>Home Training Routine</h1>
-
-    <h3>Your RFM: <%= rfm%></h3>
-    <p class="smallNotice"><%=alert %></p>
-        
-    <h3>Your Routine: <%= routine%> </h3>
     
 
+    <h3>Your RFM: <%= rfm.toFixed(2) %>%</h3>
+    <h3>RFM Table</h3>
+    <table>
+    <% if (gender =="male"){ %>
+        <%if(rfm >=2 && rfm < 6){%>            
+            <tr>
+                <th>Classification</th><th>Females(% fat)</th><th>Males(% fat)</th>
+            </tr>
+            <tr>
+                <td>Essential fat</td><td>10-13%</td><td style="background: #7373b3;">2-5%</td>
+            </tr>
+            <tr>
+                <td>Athletes</td><td>14-20%</td><td>6-13%</td>
+            </tr>
+            <tr>
+                <td>Fitness</td><td>21-24%</td><td>14-17%</td>
+            </tr>
+            <tr>
+                <td>Average</td><td>25-31%</td><td>18-24%</td>
+            </tr>
+            <tr>
+                <td>Obese</td><td>32% and higher</td><td>25% and higher</td>
+            </tr>
+        <% } else if (rfm >=6 && rfm < 14){ %>
+            <tr>
+                <th>Classification</th><th>Females(% fat)</th><th>Males(% fat)</th>
+            </tr>
+            <tr>
+                <td>Essential fat</td><td>10-13%</td><td>2-5%</td>
+            </tr>
+            <tr>
+                <td>Athletes</td><td>14-20%</td><td style="background: #7373b3;">6-13%</td>
+            </tr>
+            <tr>
+                <td>Fitness</td><td>21-24%</td><td>14-17%</td>
+            </tr>
+            <tr>
+                <td>Average</td><td>25-31%</td><td>18-24%</td>
+            </tr>
+            <tr>
+                <td>Obese</td><td>32% and higher</td><td>25% and higher</td>
+            </tr>
+        <% } else if (rfm >= 14 && rfm < 18){ %>
+            <tr>
+                <th>Classification</th><th>Females(% fat)</th><th>Males(% fat)</th>
+            </tr>
+            <tr>
+                <td>Essential fat</td><td>10-13%</td><td>2-5%</td>
+            </tr>
+            <tr>
+                <td>Athletes</td><td>14-20%</td><td>6-13%</td>
+            </tr>
+            <tr>
+                <td>Fitness</td><td>21-24%</td><td style="background: #7373b3;">14-17%</td>
+            </tr>
+            <tr>
+                <td>Average</td><td>25-31%</td><td>18-24%</td>
+            </tr>
+            <tr>
+                <td>Obese</td><td>32% and higher</td><td>25% and higher</td>
+            </tr>
+        <% } else if (rfm >= 18 && rfm < 25){ %>
+            <tr>
+                <th>Classification</th><th>Females(% fat)</th><th>Males(% fat)</th>
+            </tr>
+            <tr>
+                <td>Essential fat</td><td>10-13%</td><td>2-5%</td>
+            </tr>
+            <tr>
+                <td>Athletes</td><td>14-20%</td><td>6-13%</td>
+            </tr>
+            <tr>
+                <td>Fitness</td><td>21-24%</td><td>14-17%</td>
+            </tr>
+            <tr>
+                <td>Average</td><td>25-31%</td><td style="background: #7373b3;">18-24%</td>
+            </tr>
+            <tr>
+                <td>Obese</td><td>32% and higher</td><td>25% and higher</td>
+            </tr>
+        <% } else if (rfm >= 25){ %>
+            <tr>
+                <th>Classification</th><th>Females(% fat)</th><th>Males(% fat)</th>
+            </tr>
+            <tr>
+                <td>Essential fat</td><td>10-13%</td><td>2-5%</td>
+            </tr>
+            <tr>
+                <td>Athletes</td><td>14-20%</td><td>6-13%</td>
+            </tr>
+            <tr>
+                <td>Fitness</td><td>21-24%</td><td>14-17%</td>
+            </tr>
+            <tr>
+                <td>Average</td><td>25-31%</td><td>18-24%</td>
+            </tr>
+            <tr>
+                <td>Obese</td><td>32% and higher</td><td style="background: #7373b3;">25% and higher</td>
+            </tr>
+        <% } %>    
+    <% } else {%>
+        <% if (rfm >= 10 && rfm < 14){ %>
+            <tr>
+                <th>Classification</th><th>Females(% fat)</th><th>Males(% fat)</th>
+            </tr>
+            <tr>
+                <td>Essential fat</td><td style="background: #7373b3;">10-13%</td><td >2-5%</td>
+            </tr>
+            <tr>
+                <td>Athletes</td><td>14-20%</td><td>6-13%</td>
+            </tr>
+            <tr>
+                <td>Fitness</td><td>21-24%</td><td>14-17%</td>
+            </tr>
+            <tr>
+                <td>Average</td><td>25-31%</td><td>18-24%</td>
+            </tr>
+            <tr>
+                <td>Obese</td><td>32% and higher</td><td>25% and higher</td>
+            </tr>
+        <% } else if (rfm >= 14 && rfm < 21){%>
+            <tr>
+                <th>Classification</th><th>Females(% fat)</th><th>Males(% fat)</th>
+            </tr>
+            <tr>
+                <td>Essential fat</td><td>10-13%</td><td >2-5%</td>
+            </tr>
+            <tr>
+                <td>Athletes</td><td style="background: #7373b3;">14-20%</td><td>6-13%</td>
+            </tr>
+            <tr>
+                <td>Fitness</td><td>21-24%</td><td>14-17%</td>
+            </tr>
+            <tr>
+                <td>Average</td><td>25-31%</td><td>18-24%</td>
+            </tr>
+            <tr>
+                <td>Obese</td><td>32% and higher</td><td>25% and higher</td>
+            </tr>
+        <% } else if (rfm >= 21 && rfm < 25){%>
+            <tr>
+                <th>Classification</th><th>Females(% fat)</th><th>Males(% fat)</th>
+            </tr>
+            <tr>
+                <td>Essential fat</td><td>10-13%</td><td >2-5%</td>
+            </tr>
+            <tr>
+                <td>Athletes</td><td>14-20%</td><td>6-13%</td>
+            </tr>
+            <tr>
+                <td>Fitness</td><td style="background: #7373b3;">21-24%</td><td>14-17%</td>
+            </tr>
+            <tr>
+                <td>Average</td><td>25-31%</td><td>18-24%</td>
+            </tr>
+            <tr>
+                <td>Obese</td><td>32% and higher</td><td>25% and higher</td>
+            </tr>
+        <% } else if (rfm >= 25 && rfm < 32){ %>
+            <tr>
+                <th>Classification</th><th>Females(% fat)</th><th>Males(% fat)</th>
+            </tr>
+            <tr>
+                <td>Essential fat</td><td>10-13%</td><td >2-5%</td>
+            </tr>
+            <tr>
+                <td>Athletes</td><td>14-20%</td><td>6-13%</td>
+            </tr>
+            <tr>
+                <td>Fitness</td><td>21-24%</td><td>14-17%</td>
+            </tr>
+            <tr>
+                <td>Average</td><td style="background: #7373b3;">25-31%</td><td>18-24%</td>
+            </tr>
+            <tr>
+                <td>Obese</td><td>32% and higher</td><td>25% and higher</td>
+            </tr>
+        <% } else if (rfm >= 32){ %>
+            <tr>
+                <th>Classification</th><th>Females(% fat)</th><th>Males(% fat)</th>
+            </tr>
+            <tr>
+                <td>Essential fat</td><td>10-13%</td><td >2-5%</td>
+            </tr>
+            <tr>
+                <td>Athletes</td><td>14-20%</td><td>6-13%</td>
+            </tr>
+            <tr>
+                <td>Fitness</td><td>21-24%</td><td>14-17%</td>
+            </tr>
+            <tr>
+                <td>Average</td><td>25-31%</td><td>18-24%</td>
+            </tr>
+            <tr>
+                <td>Obese</td><td style="background: #7373b3;">32% and higher</td><td>25% and higher</td>
+            </tr>
+        <%}%>
+    <% } %>
+    </table>
+    <h3>Your Routine </h3>
+    <div class="routineContainer">
+        <div class="mon days">
+            
+            <h2>MON</h2>
+            <h3>chest</h3>
+            <table>
+                <tr><th>exercise</th><th>repetition</th><th>set</th></tr>
+                
+                    <% var week = 1; %>
+                    <% result.rows.forEach(function(o){ %>
+                        <tr>
+                        <% if (o.name != null){ %>
+                            <td><%= o.name %></td>
+                            <td><%= o.repetition %></td>
+                            <% if (o.setCount == null){ %>
+                                <td>3</td>
+                            <% } else { %>
+                                <td><%= o.setCount%></td>
+                            <% } %>
+                        <% }  %>
+                        </tr>
+                    <% }) %>
+                
+            </table>
+        </div>
+        <div class="tue days">
+            <h2>TUE</h2>
+            <h3>leg</h3>
+            <table>
+                <tr><th>exercise</th><th>repetition</th><th>set</th></tr>
+                <% var week = 1; %>
+                    <% result.rows.forEach(function(o){ %>
+                        <tr>
+                        <% if (o.name != null){ %>
+                            <td><%= o.name %></td>
+                            <td><%= o.repetition %></td>
+                            <% if (o.setCount == null){ %>
+                                <td>3</td>
+                            <% } else { %>
+                                <td><%= o.setCount%></td>
+                            <% } %>
+                        <% }  %>
+                        </tr>
+                    <% }) %>
+            </table>
+        </div>
+        <div class="wed days">
+            <h2>WED</h2>
+            <h3>core</h3>
+            <table>
+                <tr><th>exercise</th><th>repetition</th><th>set</th></tr>
+                <% var week = 1; %>
+                    <% result.rows.forEach(function(o){ %>
+                        <tr>
+                        <% if (o.name != null){ %>
+                            <td><%= o.name %></td>
+                            <td><%= o.repetition %></td>
+                            <% if (o.setCount == null){ %>
+                                <td>3</td>
+                            <% } else { %>
+                                <td><%= o.setCount%></td>
+                            <% } %>
+                        <% }  %>
+                        </tr>
+                    <% }) %>
+            </table>
+        </div>
+        <div class="thu days">
+            <h2>THU</h2>
+            <h3>leg</h3>
+            <table>
+                <tr><th>exercise</th><th>repetition</th><th>set</th></tr>
+                <% var week = 1; %>
+                    <% result.rows.forEach(function(o){ %>
+                        <tr>
+                        <% if (o.name != null){ %>
+                            <td><%= o.name %></td>
+                            <td><%= o.repetition %></td>
+                            <% if (o.setCount == null){ %>
+                                <td>3</td>
+                            <% } else { %>
+                                <td><%= o.setCount%></td>
+                            <% } %>
+                        <% }  %>
+                        </tr>
+                    <% }) %>
+            </table>
+        </div>
+        <div class="fri days">
+            <h2>FRI</h2>
+            <h3>chest</h3>
+            <table>
+                <tr><th>exercise</th><th>repetition</th><th>set</th></tr>
+                <% var week = 1; %>
+                    <% result.rows.forEach(function(o){ %>
+                        <tr>
+                        <% if (o.name != null){ %>
+                            <td><%= o.name %></td>
+                            <td><%= o.repetition %></td>
+                            <% if (o.setCount == null){ %>
+                                <td>3</td>
+                            <% } else { %>
+                                <td><%= o.setCount%></td>
+                            <% } %>
+                        <% }  %>
+                        </tr>
+                    <% }) %>
+            </table>
+        </div>
+    </div>
 </body>
 </html>

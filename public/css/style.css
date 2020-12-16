@@ -98,14 +98,12 @@ fieldset {
     margin-left: 160px;
 }
 
-.waistContainer > input , .hoursContainer > input {
+.waistContainer > input  {
     width: 10%;
     margin-left: 10px;
 }
 
-.hoursContainer {
-    margin-top: 20px;
-}
+
 
 .planField{
     background-color: #333;
@@ -128,7 +126,7 @@ fieldset {
     margin-top: 20px;
 }
 
-.preferredContainer, .levelRadio {
+.levelRadio {
     margin-top: 10px;
 }
 
@@ -146,4 +144,53 @@ fieldset {
     padding: 10px;
     background-color: #555;
     color: #fff;
+}
+#ejsBody {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.routineContainer {
+    display: flex;
+    width: 100%;
+    margin: 0 auto;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.days:nth-child(2n){
+    background: #8888dd;
+    width: 20%;
+    margin: 0 0.5%;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.days:nth-child(2n-1){
+    background: #7373b3;
+    width: 20%;
+    margin: 0 0.5%;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.days h3 {
+    text-align: center;
+    font-size: 1.8rem;
+    margin-top: 5px;
+}
+
+.days h2 {
+    background: #aad;
+    text-align: center;
+    margin: 0;
+    padding: 5px;
+}
+
+.days table, .days table>tr, .days table>tr>th, .days table>tr>td {
+    text-align: center;
 }
